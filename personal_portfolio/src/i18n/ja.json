@@ -1,6 +1,18 @@
 {
-    "header": {
-       "title": "Namikawa Tatsuya"
-     }
-   }
-   
+  "header": {
+    "title": "Tatsuya Namikawa",
+    "nav_about": "about",
+    "nav_skills": "skills",
+    "nav_hobby": "hobby"
+  },
+  "subtitle": {
+    "about": "about",
+    "skills": "skills",
+    "hobby": "hobby"
+  },
+  "button": {
+    "about": "Profile",
+    "skills": "skills",
+    "hobby": "hobby"
+  }
+}

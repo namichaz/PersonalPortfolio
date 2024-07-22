@@ -1,0 +1,26 @@
+nav ul {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  width: 100%;
+  column-gap: 30px;
+  font-size: 20px;
+  list-style: none;
+  text-decoration: none;
+  justify-content: right;
+  @media (max-width: 900px) {
+    display: none;
+  }
+}
+nav ul li a {
+  color: #333;
+  padding: 10px;
+  display: block;
+  letter-spacing: 0.1em;
+  font-weight: lighter;
+  font-size: 18px;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  opacity: 0.7;
+}
