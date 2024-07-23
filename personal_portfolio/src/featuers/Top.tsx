@@ -51,7 +51,6 @@ export const Top = () => {
         <About />
         <Skills />
         <Hobby />
-        <Line />
       </main>
       <Footer />
     </div>

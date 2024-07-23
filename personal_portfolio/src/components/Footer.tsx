@@ -14,6 +14,7 @@ export const Footer = () => {
     text-align: center;
     font-size: 16px;
     padding: 10px;
+    font-weight: 100;
   `;
 
   return (
