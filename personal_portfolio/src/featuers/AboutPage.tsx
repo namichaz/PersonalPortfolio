@@ -8,7 +8,7 @@ import { Header } from "components/Header";
 import { Footer } from "components/Footer";
 import { Line } from "components/Line";
 
-export const Profile = () => {
+export const AboutPage = () => {
   const { t } = useTranslation();
   const title = css`
     letter-spacing: 5px;
@@ -192,7 +192,7 @@ export const Profile = () => {
               component="div"
               lineHeight="30px"
               letterSpacing="3px"
-              fontSize="15px"
+              fontSize="12px"
               display="grid"
               sx={{
                 wordBreak: "keep-all",
@@ -204,7 +204,21 @@ export const Profile = () => {
                 },
               }}
             >
-              {t("profile.introduce")}
+              <Box
+                component="ul"
+                sx={{
+                  display: "grid",
+                  rowGap: "15px",
+                  textAlign: "start",
+                  fontWeight: "100",
+                  listStyle: "none",
+                  margin: "0",
+                  padding: "0",
+                }}
+              >
+                <Box component="li">{t("profile.introduceList.text1")}</Box>
+                <Box component="li">{t("profile.introduceList.text2")}</Box>
+              </Box>
             </Box>
           </Grid>
         </Grid>
@@ -263,7 +277,7 @@ export const Profile = () => {
               component="div"
               lineHeight="30px"
               letterSpacing="3px"
-              fontSize="15px"
+              fontSize="12px"
               display="grid"
               sx={{
                 wordBreak: "keep-all",

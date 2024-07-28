@@ -4,9 +4,11 @@ import { Box, Container, Grid } from "@mui/material";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import skills_image from "images/skills.jpeg";
+import { useFunctions } from "../utils";
 
 export const Skills = () => {
   const { t } = useTranslation();
+  const toOtherPage = useFunctions();
 
   const subtitleArea = css`
     position: relative;
@@ -33,7 +35,6 @@ export const Skills = () => {
   const buttonArea = css`
     width: 150px;
     height: 45px;
-    border-radius: 5px;
     border: 1px solid black;
     background-color: black;
     display: flex;
@@ -193,14 +194,14 @@ export const Skills = () => {
               <h2 css={subtitleStyle}>{t("subtitle.skills")}</h2>
               <hr css={lineStyle} />
             </div>
-            <p>
+            <div>
               <div css={buttonArea}>
-                <a css={buttonStyle} href="">
+                <a css={buttonStyle} onClick={toOtherPage}>
                   {t("button.skills")}
                 </a>
                 <i />
               </div>
-            </p>
+            </div>
           </Grid>
         </Grid>
       </Box>

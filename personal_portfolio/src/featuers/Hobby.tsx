@@ -4,9 +4,12 @@ import { Box, Container, Grid } from "@mui/material";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import moma_image from "images/moma.jpeg";
+import { useFunctions } from "../utils";
+
 
 export const Hobby = () => {
   const { t } = useTranslation();
+  const toOtherPage = useFunctions();
 
   const subtitleArea = css`
     position: relative;
@@ -33,7 +36,6 @@ export const Hobby = () => {
   const buttonArea = css`
     width: 150px;
     height: 45px;
-    border-radius: 5px;
     border: 1px solid black;
     background-color: black;
     display: flex;
@@ -189,14 +191,14 @@ export const Hobby = () => {
               <h2 css={subtitleStyle}>{t("subtitle.hobby")}</h2>
               <hr css={lineStyle} />
             </div>
-            <p>
+            <div>
               <div css={buttonArea}>
-                <a css={buttonStyle} href="">
+                <a css={buttonStyle} onClick={toOtherPage}>
                   {t("button.hobby")}
                 </a>
                 <i />
               </div>
-            </p>
+            </div>
           </Grid>
           <Grid css={description} item xs={6}>
             <img css={image_style} src={moma_image} alt="moma_image" />

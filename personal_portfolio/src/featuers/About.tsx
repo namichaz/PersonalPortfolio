@@ -4,9 +4,12 @@ import { Box, Container, Grid } from "@mui/material";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import about_image from "images/about.jpeg";
+import { useNavigate } from "react-router-dom";
+import { useFunctions } from "../utils";
 
 export const About = () => {
   const { t } = useTranslation();
+  const toOtherPage = useFunctions();
 
   const subtitleArea = css`
     position: relative;
@@ -33,7 +36,6 @@ export const About = () => {
   const buttonArea = css`
     width: 150px;
     height: 45px;
-    border-radius: 5px;
     border: 1px solid black;
     background-color: black;
     display: flex;
@@ -188,14 +190,14 @@ export const About = () => {
               <h2 css={subtitleStyle}>{t("subtitle.about")}</h2>
               <hr css={lineStyle} />
             </div>
-            <p>
+            <div>
               <div css={buttonArea}>
-                <a css={buttonStyle} href="PersonalPortfolio.git/profile">
+                <a css={buttonStyle} onClick={toOtherPage}>
                   {t("button.about")}
                 </a>
                 <i />
               </div>
-            </p>
+            </div>
           </Grid>
           <Grid css={description} item xs={6}>
             <img css={image_style} src={about_image} alt="about_image" />

@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { Top } from "featuers/Top";
-import { Profile } from "featuers/Profile";
+import { AboutPage } from "featuers/AboutPage";
+import { SkillsPage } from "featuers/SkillsPage";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Top />} />
-      <Route path="/profile" element={<Profile />} />
+      <Route path="/about" element={<AboutPage />} />
+      <Route path="/skills" element={<SkillsPage />} />
     </Routes>
   );
 }

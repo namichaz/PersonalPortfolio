@@ -3,7 +3,8 @@
     "title": "Tatsuya Namikawa",
     "nav_about": "about",
     "nav_skills": "skills",
-    "nav_hobby": "hobby"
+    "nav_hobby": "hobby",
+    "nav_home": "home"
   },
   "title": {
     "about": "about",
@@ -17,7 +18,7 @@
     "hobby": "hobby"
   },
   "button": {
-    "about": "profile",
+    "about": "about",
     "skills": "skills",
     "hobby": "hobby"
   },
@@ -30,13 +31,58 @@
     "hometown": "Home Town：Osaka",
     "profile": "profile",
     "history": "history",
-    "introduce": "横浜で10年ほど美容師として働いてました。今は大阪でエンジニアをしています。",
+    "introduceList": {
+      "text1": "横浜で10年ほど美容師として働いてました。",
+      "text2": "今は大阪でエンジニアをしています。"
+    },
     "historyList": {
       "history1": "2009 大阪の美容専門学校 卒業",
       "history2": "2009 横浜のヘアサロン 入社",
       "history3": "2018 横浜のヘアサロン 退社",
       "history4": "2019 大阪に帰る",
       "history5": "2021 IT業界に飛び込み現在に至る"
+    }
+  },
+  "skills": {
+    "levels": {
+      "a": "A：人に教えられる",
+      "b": "B：一人でできる",
+      "c": "C：助けがあればできる",
+      "d": "D：触ったことがある"
+    },
+    "levelsType": {
+      "a": "A",
+      "b": "B",
+      "c": "C",
+      "d": "D"
+    },
+    "level": "level",
+    "period": "period",
+    "skillsType": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "framework": "Framework",
+      "database": "Database",
+      "certification": "Certification"
+    },
+    "periodType": {
+      "years": "years",
+      "month": "month"
+    },
+    "skillsName": {
+      "javascript": "Javascript",
+      "html": "HTML",
+      "css": "CSS",
+      "java": "Java",
+      "c#": "C#",
+      "react": "React",
+      "vue": "Vue",
+      "springboot": "Springboot",
+      "postgres": "PostgreSQL",
+      "oracl": "Oracle",
+      "mysql": "MySQL",
+      "javasilver": "Java Silver SE10",
+      "lpic1": "Lpic Level 1"
     }
   }
 }

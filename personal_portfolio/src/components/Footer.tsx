@@ -10,9 +10,8 @@ export const Footer = () => {
   const name = t("header.title");
 
   const footerArea = css`
-    width: 100%;
     text-align: center;
-    font-size: 16px;
+    font-size: 13px;
     padding: 20px;
     font-weight: 100;
     position: absolute;

@@ -8,8 +8,9 @@ import { Line } from "components/Line";
 import { About } from "featuers/About";
 import { Skills } from "./Skills";
 import { Hobby } from "./Hobby";
+import { useNavigate } from "react-router-dom";
 
-export const Top = () => {
+export const Top: React.FC = () => {
   const image_style = css`
     width: 100%;
     height: 700px;

@@ -1,7 +1,7 @@
 {
   "name": "personal_portfolio",
   "version": "0.1.0",
-  "homepage": "https://namichaz.github.io/PersonalPortfolio.git/",
+  "homepage": "https://namichaz.github.io/PersonalPortfolio/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.13.0",

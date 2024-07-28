@@ -8,8 +8,8 @@ interface HamburgerProps {
 }
 
 const hamburgerStyle = (active: boolean) => css`
-  width: 30px;
-  height: 3px;
+  width: 25px;
+  height: 1px;
   background-color: ${active ? "transparent" : "#333"};
   position: relative;
   transition: all 0.3s ease;
@@ -21,14 +21,14 @@ const hamburgerStyle = (active: boolean) => css`
     content: "";
     display: block;
     width: 100%;
-    height: 3px;
+    height: 1px;
     background-color: #333;
     position: absolute;
     transition: all 0.3s ease;
   }
 
   &::before {
-    top: -10px;
+    top: -8px;
     ${active &&
     `
       top: 0;
@@ -37,7 +37,7 @@ const hamburgerStyle = (active: boolean) => css`
   }
 
   &::after {
-    bottom: -10px;
+    bottom: -8px;
     ${active &&
     `
       bottom: 0;
