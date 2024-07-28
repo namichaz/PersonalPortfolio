@@ -13,8 +13,10 @@ export const Footer = () => {
     width: 100%;
     text-align: center;
     font-size: 16px;
-    padding: 10px;
+    padding: 20px;
     font-weight: 100;
+    position: absolute;
+    bottom: 0;
   `;
 
   return (

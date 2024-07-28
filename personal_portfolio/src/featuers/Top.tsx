@@ -37,21 +37,36 @@ export const Top = () => {
   `;
 
   const mainStyle = css`
-    height: 100%;
-    width: 100%;
+    animation-name: faderightAnime; /*アニメーションの定義名*/
+    animation-duration: 1s; /*アニメーション変化時間 ※デフォルト*/
+    animation-fill-mode: forwards; /*アニメーションの開始と終了時の状態を指定*/
+    opacity: 0;
+    animation-duration: 0ms.5;
+    display: block;
+    min-height: 100vh;
+    padding-bottom: 60px; /*←footerの高さ*/
+    box-sizing: border-box;
+    @keyframes faderightAnime {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   `;
 
   return (
-    <div>
-      <Header />
-      <main css={mainStyle}>
-        <Container maxWidth="lg" fixed>
-          <img css={image_style} src={top_image} alt="top_image" />
-        </Container>
-        <About />
-        <Skills />
-        <Hobby />
-      </main>
+    <div css={mainStyle}>
+      <Header status={true} />
+      <Container maxWidth="lg" fixed>
+        <img css={image_style} src={top_image} alt="top_image" />
+      </Container>
+      <About />
+      <Skills />
+      <Hobby />
       <Footer />
     </div>
   );

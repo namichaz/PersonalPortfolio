@@ -14,6 +14,7 @@ const hamburgerStyle = (active: boolean) => css`
   position: relative;
   transition: all 0.3s ease;
   top: 30px;
+  z-index: 9999;
 
   &::before,
   &::after {

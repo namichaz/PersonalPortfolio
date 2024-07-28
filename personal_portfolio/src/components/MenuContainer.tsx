@@ -9,18 +9,18 @@ interface MenuContainerProps {
 
 const menuContainerStyle = (isOpen: boolean) => css`
   position: fixed;
-  top: 60px;
+  top: 0px;
   left: 0;
   width: 100%;
-  height: 50%;
+  height: 100%;
   background: gray;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transform: ${isOpen ? "translateX(0)" : "translateX(-100%)"};
+  transform: ${isOpen ? "translateY(0)" : "translateY(-100%)"};
   transition: transform 0.3s ease;
-  z-index: 1000;
+  z-index: 2;
   opacity: 0.9;
 `;
 
@@ -37,7 +37,6 @@ const aStyle = css`
   color: white;
   font-weight: 100;
   letter-spacing: 5px;
-
   &:hover {
     opacity: 0.5;
   }
@@ -45,6 +44,11 @@ const aStyle = css`
 
 export const MenuContainer: React.FC<MenuContainerProps> = ({ isOpen }) => (
   <div css={menuContainerStyle(isOpen)}>
+    <div css={menuItemStyle}>
+      <a css={aStyle} href="">
+        home
+      </a>
+    </div>
     <div css={menuItemStyle}>
       <a css={aStyle} href="">
         about

@@ -5,6 +5,12 @@
     "nav_skills": "skills",
     "nav_hobby": "hobby"
   },
+  "title": {
+    "about": "about",
+    "skills": "skills",
+    "hobby": "hobby"
+  },
+
   "subtitle": {
     "about": "about",
     "skills": "skills",
@@ -14,5 +20,23 @@
     "about": "profile",
     "skills": "skills",
     "hobby": "hobby"
+  },
+  "profile": {
+    "name": "並川 達也",
+    "en_name": "Tatsuya Namikawa",
+    "age": "Age：35",
+    "born": "Born：1988.10.13",
+    "bloodtype": "Blood Type：B",
+    "hometown": "Home Town：Osaka",
+    "profile": "profile",
+    "history": "history",
+    "introduce": "横浜で10年ほど美容師として働いてました。今は大阪でエンジニアをしています。",
+    "historyList": {
+      "history1": "2009 大阪の美容専門学校 卒業",
+      "history2": "2009 横浜のヘアサロン 入社",
+      "history3": "2018 横浜のヘアサロン 退社",
+      "history4": "2019 大阪に帰る",
+      "history5": "2021 IT業界に飛び込み現在に至る"
+    }
   }
 }

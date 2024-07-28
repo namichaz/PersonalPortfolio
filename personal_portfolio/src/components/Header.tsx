@@ -5,15 +5,19 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import "styles/menuButton.css";
 import { Hamburger } from "./Hambuger";
-import { MenuContainer } from "./Menu";
+import { MenuContainer } from "./MenuContainer";
 
-export const Header = () => {
+type Props = {
+  status?: boolean;
+};
+
+export const Header = (props: Props) => {
   const { t } = useTranslation();
-
   const titleStyle = css`
     @media (max-width: 900px) {
-      font-size: 22px;
+      font-size: 20px;
       width: 350px;
+      padding: 10px;
     }
   `;
 
@@ -21,7 +25,7 @@ export const Header = () => {
     text-decoration: none;
     color: black;
     font-weight: 100;
-    letter-spacing: 7px;
+    letter-spacing: 5px;
 
     &:hover {
       opacity: 0.7;
@@ -38,6 +42,20 @@ export const Header = () => {
     }
   `;
 
+  const containerStyle = css`
+    display: ${props.status ? "grid" : "flex"};
+    justify-content: ${props.status ? "center" : "space-between"};
+    text-align: center;
+    @media (max-width: 900px) {
+      display: flex;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      background-color: white;
+      z-index: 9999;
+    }
+  `;
+
   const [isActive, setIsActive] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -47,16 +65,12 @@ export const Header = () => {
   };
 
   return (
-    <Container
-      sx={{ display: "flex", justifyContent: "space-around" }}
-      maxWidth="lg"
-      fixed
-    >
-      <h2 css={titleStyle}>
-        <a css={aStyle} href="/">
+    <Container css={containerStyle} maxWidth="lg" fixed>
+      <h1 css={titleStyle}>
+        <a css={aStyle} href="/PersonalPortfolio.git">
           {t("header.title")}
         </a>
-      </h2>
+      </h1>
       <div css={menubutton}>
         <Hamburger active={isActive} onClick={toggleActive} />
         <MenuContainer isOpen={isOpen} />
@@ -64,7 +78,7 @@ export const Header = () => {
       <nav>
         <ul>
           <li>
-            <a href="">{t("header.nav_about")}</a>
+            <a href="PersonalPortfolio.git/profile">{t("header.nav_about")}</a>
           </li>
           <li>
             <a href="">{t("header.nav_skills")}</a>
