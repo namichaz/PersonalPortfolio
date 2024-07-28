@@ -1,17 +1,18 @@
 {
   "files": {
     "main.css": "/PersonalPortfolio.git/static/css/main.23a4eaa1.css",
-    "main.js": "/PersonalPortfolio.git/static/js/main.24da103a.js",
+    "main.js": "/PersonalPortfolio.git/static/js/main.365f034a.js",
     "static/media/moma.jpeg": "/PersonalPortfolio.git/static/media/moma.01750c29f8a8480d463a.jpeg",
     "static/media/skills.jpeg": "/PersonalPortfolio.git/static/media/skills.1d7ba8f0cd0b0338d28d.jpeg",
     "static/media/top.jpeg": "/PersonalPortfolio.git/static/media/top.f72369f470c52b513b80.jpeg",
+    "static/media/me.jpeg": "/PersonalPortfolio.git/static/media/me.f6713d78095bc270a6b6.jpeg",
     "static/media/about.jpeg": "/PersonalPortfolio.git/static/media/about.2ed0672b6ab7fe5ee987.jpeg",
     "index.html": "/PersonalPortfolio.git/index.html",
     "main.23a4eaa1.css.map": "/PersonalPortfolio.git/static/css/main.23a4eaa1.css.map",
-    "main.24da103a.js.map": "/PersonalPortfolio.git/static/js/main.24da103a.js.map"
+    "main.365f034a.js.map": "/PersonalPortfolio.git/static/js/main.365f034a.js.map"
   },
   "entrypoints": [
     "static/css/main.23a4eaa1.css",
-    "static/js/main.24da103a.js"
+    "static/js/main.365f034a.js"
   ]
 }
