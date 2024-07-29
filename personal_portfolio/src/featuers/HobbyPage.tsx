@@ -8,7 +8,7 @@ import { Header } from "components/Header";
 import { Footer } from "components/Footer";
 import { Line } from "components/Line";
 
-export const SkillsPage = () => {
+export const HobbyPage = () => {
   const { t } = useTranslation();
   const title = css`
     letter-spacing: 5px;
@@ -356,7 +356,7 @@ export const SkillsPage = () => {
                   textAlign: "start",
                   listStyle: "none",
                   margin: "0",
-                  padding: "0 50px 0 0",
+                  padding: "0 48px 0 0",
                 }}
               >
                 <Box component="li">{t("skills.skillsName.java")}</Box>

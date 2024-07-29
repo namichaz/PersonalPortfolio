@@ -9,6 +9,7 @@ import { About } from "featuers/About";
 import { Skills } from "./Skills";
 import { Hobby } from "./Hobby";
 import { useNavigate } from "react-router-dom";
+import ScrollToTopButton from "components/ScrollToTopButton";
 
 export const Top: React.FC = () => {
   const image_style = css`

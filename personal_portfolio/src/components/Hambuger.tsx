@@ -47,5 +47,7 @@ const hamburgerStyle = (active: boolean) => css`
 `;
 
 export const Hamburger: React.FC<HamburgerProps> = ({ active, onClick }) => (
-  <div css={hamburgerStyle(active)} onClick={onClick} />
+  <div onClick={onClick}>
+    <div css={hamburgerStyle(active)} />
+  </div>
 );
