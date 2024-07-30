@@ -7,6 +7,16 @@ import me from "images/me.jpeg";
 import { Header } from "components/Header";
 import { Footer } from "components/Footer";
 import { Line } from "components/Line";
+import travel1 from "../images/fujisan.jpeg";
+import travel2 from "../images/ny1.jpeg";
+import travel3 from "../images/ny2.jpeg";
+import coffee1 from "../images/coffee1.jpeg";
+import coffee2 from "../images/coffee2.jpeg";
+import food1 from "../images/food1.jpeg";
+import food2 from "../images/food2.jpeg";
+import food3 from "../images/food3.jpeg";
+import art1 from "../images/art1.jpeg";
+import art2 from "../images/art2.jpeg";
 
 export const HobbyPage = () => {
   const { t } = useTranslation();
@@ -29,6 +39,19 @@ export const HobbyPage = () => {
     @media (max-width: 900px) {
       padding: 20px;
     }
+  `;
+
+  const subContainerStyle = css`
+    padding: 40px 100px;
+    font-size: 15px;
+    @media (max-width: 900px) {
+      padding: 20px;
+    }
+  `;
+
+  const imageStyle = css`
+    width: 250px;
+    height: 250px;
   `;
 
   const mainStyle = css`
@@ -56,64 +79,14 @@ export const HobbyPage = () => {
   return (
     <div css={mainStyle}>
       <Header status={false} />
-      <Container css={containerStyle} maxWidth="lg">
+      <Container css={subContainerStyle} maxWidth="lg">
         <div css={title}>
-          <h1> {t("title.skills")}</h1>
+          <h1> {t("title.hobby")}</h1>
         </div>
       </Container>
-      <Container css={containerStyle} maxWidth="lg">
-        <Grid container sx={{ textAlign: "center" }} item xs={true}>
-          <Box
-            component="div"
-            sx={{
-              width: "100%",
-              justifyContent: "center",
-              display: "flex",
-            }}
-          >
-            <Box
-              component="ul"
-              sx={{
-                display: { xs: "grid", sm: "grid", md: "flex", lg: "flex" },
-                rowGap: "20px",
-                columnGap: "4rem",
-                textAlign: "start",
-                fontWeight: "100",
-                listStyle: "none",
-                fontSize: { xs: "13px", sm: "15px", md: "15px", lg: "15px" },
-              }}
-            >
-              <Box component="li">{t("skills.levels.a")}</Box>
-              <Box component="li">{t("skills.levels.b")}</Box>
-              <Box component="li">{t("skills.levels.c")}</Box>
-              <Box component="li">{t("skills.levels.d")}</Box>
-            </Box>
-          </Box>
-        </Grid>
-      </Container>
-      <Container maxWidth="lg">
-        <Box
-          component="div"
-          sx={{
-            display: "flex",
-            columnGap: { xs: "110px", sm: "240px", md: "370px", lg: "380px" },
-            justifyContent: "end",
-            fontSize: "14px",
-            fontWeight: "100",
-          }}
-        >
-          <Box component="p" sx={{}}>
-            {t("skills.level")}
-          </Box>
-          <Box component="p" sx={{}}>
-            {t("skills.period")}
-          </Box>
-        </Box>
-      </Container>
-      <Line />
 
-      {/* TODO frontend */}
-      <Container css={containerStyle} maxWidth="lg">
+      {/* TODO travel */}
+      <Container css={subContainerStyle} maxWidth="lg">
         <Grid
           container
           columnSpacing={{ xs: 1, sm: 2, md: 3 }}
@@ -128,7 +101,7 @@ export const HobbyPage = () => {
             sx={{
               textAlign: "center",
               "@media (max-width:600px)": {
-                justifyContent: "start",
+                justifyContent: "center",
                 display: "grid",
                 paddingBottom: "20px",
               },
@@ -154,9 +127,10 @@ export const HobbyPage = () => {
                   alignItems: "center",
                   fontSize: { xs: "12px", sm: "15px", md: "15px", lg: "20px" },
                   fontWeight: "100",
+                  padding: "0",
                 }}
               >
-                {t("skills.skillsType.frontend")}
+                {t("hobby.travel")}
               </Box>
             </Box>
           </Grid>
@@ -192,88 +166,25 @@ export const HobbyPage = () => {
                 sx={{
                   display: "grid",
                   rowGap: "15px",
-                  textAlign: "start",
+                  textAlign: {
+                    xs: "center",
+                    sm: "start",
+                    md: "start",
+                    lg: "start",
+                  },
                   listStyle: "none",
                   margin: "0",
                   padding: "0",
                 }}
               >
-                <Box component="li">{t("skills.skillsName.javascript")}</Box>
-                <Box component="li">{t("skills.skillsName.html")}</Box>
-                <Box component="li">{t("skills.skillsName.css")}</Box>
-              </Box>
-            </Box>
-            <Box
-              textAlign="left"
-              component="div"
-              lineHeight="30px"
-              letterSpacing="3px"
-              display="grid"
-              sx={{
-                wordBreak: "keep-all",
-                justifyContent: {
-                  xs: "center",
-                  sm: "left",
-                  md: "left",
-                  lg: "left",
-                },
-              }}
-            >
-              <Box
-                component="ul"
-                sx={{
-                  display: "grid",
-                  rowGap: "15px",
-                  textAlign: "start",
-                  listStyle: "none",
-                  margin: "0",
-                  padding: "0",
-                }}
-              >
-                <Box component="li">{t("skills.levelsType.b")}</Box>
-                <Box component="li">{t("skills.levelsType.b")}</Box>
-                <Box component="li">{t("skills.levelsType.b")}</Box>
-              </Box>
-            </Box>
-            <Box
-              textAlign="left"
-              component="div"
-              lineHeight="30px"
-              letterSpacing="3px"
-              display="grid"
-              sx={{
-                wordBreak: "keep-all",
-                justifyContent: {
-                  xs: "center",
-                  sm: "left",
-                  md: "left",
-                  lg: "left",
-                },
-              }}
-            >
-              <Box
-                component="ul"
-                sx={{
-                  display: "grid",
-                  rowGap: "15px",
-                  textAlign: "start",
-                  margin: "0",
-                  padding: "0",
-                  listStyle: "none",
-                }}
-              >
-                <Box component="li">3 {t("skills.periodType.years")}</Box>
-                <Box component="li">3 {t("skills.periodType.years")}</Box>
-                <Box component="li">3 {t("skills.periodType.years")}</Box>
+                <Box component="li">{t("hobby.description.travelText1")}</Box>
+                <Box component="li">{t("hobby.description.travelText2")}</Box>
               </Box>
             </Box>
           </Grid>
         </Grid>
       </Container>
-      <Line />
-
-      {/* TODO backend */}
-      <Container css={containerStyle} maxWidth="lg">
+      <Container css={subContainerStyle} maxWidth="lg">
         <Grid
           container
           columnSpacing={{ xs: 1, sm: 2, md: 3 }}
@@ -283,13 +194,14 @@ export const HobbyPage = () => {
             md: "row",
             lg: "row",
           }}
+          justifyContent="center"
         >
           <Grid
             sx={{
               textAlign: "center",
               "@media (max-width:600px)": {
                 justifyContent: "start",
-                display: "grid",
+                display: "none",
                 paddingBottom: "20px",
               },
             }}
@@ -299,12 +211,11 @@ export const HobbyPage = () => {
             <Box
               component="div"
               sx={{
-                border: "solid 2px",
                 width: { xs: "80px", sm: "100px", md: "120px", lg: "150px" },
                 height: { xs: "20px", sm: "30px", md: "40px", lg: "40px" },
                 textAlign: "center",
                 padding: "10px",
-                display: "grid",
+                display: "none",
               }}
             >
               <Box
@@ -315,9 +226,7 @@ export const HobbyPage = () => {
                   fontSize: { xs: "12px", sm: "15px", md: "15px", lg: "20px" },
                   fontWeight: "100",
                 }}
-              >
-                {t("skills.skillsType.backend")}
-              </Box>
+              ></Box>
             </Box>
           </Grid>
           <Grid
@@ -327,7 +236,6 @@ export const HobbyPage = () => {
               justifyContent: "space-around",
               fontSize: { xs: "12px", sm: "15px", md: "15px", lg: "15px" },
               fontWeight: "100",
-              columnGap: "20px",
             }}
             item
             xs={9}
@@ -351,87 +259,27 @@ export const HobbyPage = () => {
               <Box
                 component="ul"
                 sx={{
-                  display: "grid",
-                  rowGap: "15px",
-                  textAlign: "start",
-                  listStyle: "none",
-                  margin: "0",
-                  padding: "0 48px 0 0",
-                }}
-              >
-                <Box component="li">{t("skills.skillsName.java")}</Box>
-                <Box component="li">{t("skills.skillsName.c#")}</Box>
-              </Box>
-            </Box>
-            <Box
-              textAlign="left"
-              component="div"
-              lineHeight="30px"
-              letterSpacing="3px"
-              display="grid"
-              sx={{
-                wordBreak: "keep-all",
-                justifyContent: {
-                  xs: "center",
-                  sm: "left",
-                  md: "left",
-                  lg: "left",
-                },
-              }}
-            >
-              <Box
-                component="ul"
-                sx={{
-                  display: "grid",
-                  rowGap: "15px",
-                  textAlign: "start",
+                  display: { xs: "grid", sm: "flex", md: "flex", lg: "flex" },
+                  columnGap: "20px",
+                  rowGap: "20px",
+                  textAlign: "center",
                   listStyle: "none",
                   margin: "0",
                   padding: "0",
                 }}
               >
-                <Box component="li">{t("skills.levelsType.c")}</Box>
-                <Box component="li">{t("skills.levelsType.c")}</Box>
-              </Box>
-            </Box>
-            <Box
-              textAlign="left"
-              component="div"
-              lineHeight="30px"
-              letterSpacing="3px"
-              display="grid"
-              sx={{
-                wordBreak: "keep-all",
-                justifyContent: {
-                  xs: "center",
-                  sm: "left",
-                  md: "left",
-                  lg: "left",
-                },
-              }}
-            >
-              <Box
-                component="ul"
-                sx={{
-                  display: "grid",
-                  rowGap: "15px",
-                  textAlign: "start",
-                  margin: "0",
-                  padding: "0",
-                  listStyle: "none",
-                }}
-              >
-                <Box component="li">3 {t("skills.periodType.years")}</Box>
-                <Box component="li">3 {t("skills.periodType.years")}</Box>
+                <Box component="img" src={travel1} css={imageStyle} />
+                <Box component="img" src={travel2} css={imageStyle} />
+                <Box component="img" src={travel3} css={imageStyle} />
               </Box>
             </Box>
           </Grid>
         </Grid>
       </Container>
-      <Line />
 
-      {/* TODO framework */}
-      <Container css={containerStyle} maxWidth="lg">
+      <Line />
+      {/* TODO coffee */}
+      <Container css={subContainerStyle} maxWidth="lg">
         <Grid
           container
           columnSpacing={{ xs: 1, sm: 2, md: 3 }}
@@ -446,7 +294,7 @@ export const HobbyPage = () => {
             sx={{
               textAlign: "center",
               "@media (max-width:600px)": {
-                justifyContent: "start",
+                justifyContent: "center",
                 display: "grid",
                 paddingBottom: "20px",
               },
@@ -472,9 +320,10 @@ export const HobbyPage = () => {
                   alignItems: "center",
                   fontSize: { xs: "12px", sm: "15px", md: "15px", lg: "20px" },
                   fontWeight: "100",
+                  padding: "0",
                 }}
               >
-                {t("skills.skillsType.framework")}
+                {t("hobby.coffee")}
               </Box>
             </Box>
           </Grid>
@@ -510,17 +359,80 @@ export const HobbyPage = () => {
                 sx={{
                   display: "grid",
                   rowGap: "15px",
-                  textAlign: "start",
+                  textAlign: {
+                    xs: "center",
+                    sm: "start",
+                    md: "start",
+                    lg: "start",
+                  },
                   listStyle: "none",
                   margin: "0",
                   padding: "0",
                 }}
               >
-                <Box component="li">{t("skills.skillsName.react")}</Box>
-                <Box component="li">{t("skills.skillsName.vue")}</Box>
-                <Box component="li">{t("skills.skillsName.springboot")}</Box>
+                <Box component="li">{t("hobby.description.coffeeText1")}</Box>
+                <Box component="li">{t("hobby.description.coffeeText2")}</Box>
               </Box>
             </Box>
+          </Grid>
+        </Grid>
+      </Container>
+      <Container css={subContainerStyle} maxWidth="lg">
+        <Grid
+          container
+          columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+          direction={{
+            xs: "column",
+            sm: "row",
+            md: "row",
+            lg: "row",
+          }}
+          justifyContent="center"
+        >
+          <Grid
+            sx={{
+              textAlign: "center",
+              "@media (max-width:600px)": {
+                justifyContent: "start",
+                display: "none",
+                paddingBottom: "20px",
+              },
+            }}
+            item
+            xs={3}
+          >
+            <Box
+              component="div"
+              sx={{
+                width: { xs: "80px", sm: "100px", md: "120px", lg: "150px" },
+                height: { xs: "20px", sm: "30px", md: "40px", lg: "40px" },
+                textAlign: "center",
+                padding: "10px",
+                display: "none",
+              }}
+            >
+              <Box
+                component="div"
+                sx={{
+                  display: "grid",
+                  alignItems: "center",
+                  fontSize: { xs: "12px", sm: "15px", md: "15px", lg: "20px" },
+                  fontWeight: "100",
+                }}
+              ></Box>
+            </Box>
+          </Grid>
+          <Grid
+            sx={{
+              textAlign: "center",
+              display: "flex",
+              justifyContent: "space-around",
+              fontSize: { xs: "12px", sm: "15px", md: "15px", lg: "15px" },
+              fontWeight: "100",
+            }}
+            item
+            xs={9}
+          >
             <Box
               textAlign="left"
               component="div"
@@ -540,49 +452,17 @@ export const HobbyPage = () => {
               <Box
                 component="ul"
                 sx={{
-                  display: "grid",
-                  rowGap: "15px",
-                  textAlign: "start",
+                  display: { xs: "grid", sm: "flex", md: "flex", lg: "flex" },
+                  columnGap: "20px",
+                  rowGap: "20px",
+                  textAlign: "center",
                   listStyle: "none",
                   margin: "0",
                   padding: "0",
                 }}
               >
-                <Box component="li">{t("skills.levelsType.c")}</Box>
-                <Box component="li">{t("skills.levelsType.c")}</Box>
-                <Box component="li">{t("skills.levelsType.c")}</Box>
-              </Box>
-            </Box>
-            <Box
-              textAlign="left"
-              component="div"
-              lineHeight="30px"
-              letterSpacing="3px"
-              display="grid"
-              sx={{
-                wordBreak: "keep-all",
-                justifyContent: {
-                  xs: "center",
-                  sm: "left",
-                  md: "left",
-                  lg: "left",
-                },
-              }}
-            >
-              <Box
-                component="ul"
-                sx={{
-                  display: "grid",
-                  rowGap: "15px",
-                  textAlign: "start",
-                  margin: "0",
-                  padding: "0",
-                  listStyle: "none",
-                }}
-              >
-                <Box component="li">3 {t("skills.periodType.years")}</Box>
-                <Box component="li">3 {t("skills.periodType.years")}</Box>
-                <Box component="li">3 {t("skills.periodType.years")}</Box>
+                <Box component="img" src={coffee1} css={imageStyle} />
+                <Box component="img" src={coffee2} css={imageStyle} />
               </Box>
             </Box>
           </Grid>
@@ -590,8 +470,8 @@ export const HobbyPage = () => {
       </Container>
       <Line />
 
-      {/* TODO database */}
-      <Container css={containerStyle} maxWidth="lg">
+      {/* TODO food */}
+      <Container css={subContainerStyle} maxWidth="lg">
         <Grid
           container
           columnSpacing={{ xs: 1, sm: 2, md: 3 }}
@@ -606,7 +486,7 @@ export const HobbyPage = () => {
             sx={{
               textAlign: "center",
               "@media (max-width:600px)": {
-                justifyContent: "start",
+                justifyContent: "center",
                 display: "grid",
                 paddingBottom: "20px",
               },
@@ -632,9 +512,10 @@ export const HobbyPage = () => {
                   alignItems: "center",
                   fontSize: { xs: "12px", sm: "15px", md: "15px", lg: "20px" },
                   fontWeight: "100",
+                  padding: "0",
                 }}
               >
-                {t("skills.skillsType.database")}
+                {t("hobby.food")}
               </Box>
             </Box>
           </Grid>
@@ -670,17 +551,80 @@ export const HobbyPage = () => {
                 sx={{
                   display: "grid",
                   rowGap: "15px",
-                  textAlign: "start",
+                  textAlign: {
+                    xs: "center",
+                    sm: "start",
+                    md: "start",
+                    lg: "start",
+                  },
                   listStyle: "none",
                   margin: "0",
                   padding: "0",
                 }}
               >
-                <Box component="li">{t("skills.skillsName.postgres")}</Box>
-                <Box component="li">{t("skills.skillsName.oracle")}</Box>
-                <Box component="li">{t("skills.skillsName.mysql")}</Box>
+                <Box component="li">{t("hobby.description.foodText1")}</Box>
+                <Box component="li">{t("hobby.description.foodText2")}</Box>
               </Box>
             </Box>
+          </Grid>
+        </Grid>
+      </Container>
+      <Container css={subContainerStyle} maxWidth="lg">
+        <Grid
+          container
+          columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+          direction={{
+            xs: "column",
+            sm: "row",
+            md: "row",
+            lg: "row",
+          }}
+          justifyContent="center"
+        >
+          <Grid
+            sx={{
+              textAlign: "center",
+              "@media (max-width:600px)": {
+                justifyContent: "start",
+                display: "none",
+                paddingBottom: "20px",
+              },
+            }}
+            item
+            xs={3}
+          >
+            <Box
+              component="div"
+              sx={{
+                width: { xs: "80px", sm: "100px", md: "120px", lg: "150px" },
+                height: { xs: "20px", sm: "30px", md: "40px", lg: "40px" },
+                textAlign: "center",
+                padding: "10px",
+                display: "none",
+              }}
+            >
+              <Box
+                component="div"
+                sx={{
+                  display: "grid",
+                  alignItems: "center",
+                  fontSize: { xs: "12px", sm: "15px", md: "15px", lg: "20px" },
+                  fontWeight: "100",
+                }}
+              ></Box>
+            </Box>
+          </Grid>
+          <Grid
+            sx={{
+              textAlign: "center",
+              display: "flex",
+              justifyContent: "space-around",
+              fontSize: { xs: "12px", sm: "15px", md: "15px", lg: "15px" },
+              fontWeight: "100",
+            }}
+            item
+            xs={9}
+          >
             <Box
               textAlign="left"
               component="div"
@@ -700,58 +644,26 @@ export const HobbyPage = () => {
               <Box
                 component="ul"
                 sx={{
-                  display: "grid",
-                  rowGap: "15px",
-                  textAlign: "start",
+                  display: { xs: "grid", sm: "flex", md: "flex", lg: "flex" },
+                  columnGap: "20px",
+                  rowGap: "20px",
+                  textAlign: "center",
                   listStyle: "none",
                   margin: "0",
                   padding: "0",
                 }}
               >
-                <Box component="li">{t("skills.levelsType.b")}</Box>
-                <Box component="li">{t("skills.levelsType.b")}</Box>
-                <Box component="li">{t("skills.levelsType.c")}</Box>
-              </Box>
-            </Box>
-            <Box
-              textAlign="left"
-              component="div"
-              lineHeight="30px"
-              letterSpacing="3px"
-              display="grid"
-              sx={{
-                wordBreak: "keep-all",
-                justifyContent: {
-                  xs: "center",
-                  sm: "left",
-                  md: "left",
-                  lg: "left",
-                },
-              }}
-            >
-              <Box
-                component="ul"
-                sx={{
-                  display: "grid",
-                  rowGap: "15px",
-                  textAlign: "start",
-                  margin: "0",
-                  padding: "0",
-                  listStyle: "none",
-                }}
-              >
-                <Box component="li">3 {t("skills.periodType.years")}</Box>
-                <Box component="li">3 {t("skills.periodType.years")}</Box>
-                <Box component="li">3 {t("skills.periodType.years")}</Box>
+                <Box component="img" src={food1} css={imageStyle} />
+                <Box component="img" src={food2} css={imageStyle} />
+                <Box component="img" src={food3} css={imageStyle} />
               </Box>
             </Box>
           </Grid>
         </Grid>
       </Container>
       <Line />
-
-      {/* TODO certificate */}
-      <Container css={containerStyle} maxWidth="lg">
+      {/* TODO art */}
+      <Container css={subContainerStyle} maxWidth="lg">
         <Grid
           container
           columnSpacing={{ xs: 1, sm: 2, md: 3 }}
@@ -766,7 +678,7 @@ export const HobbyPage = () => {
             sx={{
               textAlign: "center",
               "@media (max-width:600px)": {
-                justifyContent: "start",
+                justifyContent: "center",
                 display: "grid",
                 paddingBottom: "20px",
               },
@@ -792,9 +704,10 @@ export const HobbyPage = () => {
                   alignItems: "center",
                   fontSize: { xs: "12px", sm: "15px", md: "15px", lg: "20px" },
                   fontWeight: "100",
+                  padding: "0",
                 }}
               >
-                {t("skills.skillsType.certification")}
+                {t("hobby.art")}
               </Box>
             </Box>
           </Grid>
@@ -830,14 +743,110 @@ export const HobbyPage = () => {
                 sx={{
                   display: "grid",
                   rowGap: "15px",
-                  textAlign: "start",
+                  textAlign: {
+                    xs: "center",
+                    sm: "start",
+                    md: "start",
+                    lg: "start",
+                  },
                   listStyle: "none",
                   margin: "0",
                   padding: "0",
                 }}
               >
-                <Box component="li">{t("skills.skillsName.javasilver")}</Box>
-                <Box component="li">{t("skills.skillsName.lpic1")}</Box>
+                <Box component="li">{t("hobby.description.artText1")}</Box>
+                <Box component="li">{t("hobby.description.artText2")}</Box>
+              </Box>
+            </Box>
+          </Grid>
+        </Grid>
+      </Container>
+      <Container css={subContainerStyle} maxWidth="lg">
+        <Grid
+          container
+          columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+          direction={{
+            xs: "column",
+            sm: "row",
+            md: "row",
+            lg: "row",
+          }}
+          justifyContent="center"
+        >
+          <Grid
+            sx={{
+              textAlign: "center",
+              "@media (max-width:600px)": {
+                justifyContent: "start",
+                display: "none",
+                paddingBottom: "20px",
+              },
+            }}
+            item
+            xs={3}
+          >
+            <Box
+              component="div"
+              sx={{
+                width: { xs: "80px", sm: "100px", md: "120px", lg: "150px" },
+                height: { xs: "20px", sm: "30px", md: "40px", lg: "40px" },
+                textAlign: "center",
+                padding: "10px",
+                display: "none",
+              }}
+            >
+              <Box
+                component="div"
+                sx={{
+                  display: "grid",
+                  alignItems: "center",
+                  fontSize: { xs: "12px", sm: "15px", md: "15px", lg: "20px" },
+                  fontWeight: "100",
+                }}
+              ></Box>
+            </Box>
+          </Grid>
+          <Grid
+            sx={{
+              textAlign: "center",
+              display: "flex",
+              justifyContent: "space-around",
+              fontSize: { xs: "12px", sm: "15px", md: "15px", lg: "15px" },
+              fontWeight: "100",
+            }}
+            item
+            xs={9}
+          >
+            <Box
+              textAlign="left"
+              component="div"
+              lineHeight="30px"
+              letterSpacing="3px"
+              display="grid"
+              sx={{
+                wordBreak: "keep-all",
+                justifyContent: {
+                  xs: "center",
+                  sm: "left",
+                  md: "left",
+                  lg: "left",
+                },
+              }}
+            >
+              <Box
+                component="ul"
+                sx={{
+                  display: { xs: "grid", sm: "flex", md: "flex", lg: "flex" },
+                  columnGap: "20px",
+                  rowGap: "20px",
+                  textAlign: "center",
+                  listStyle: "none",
+                  margin: "0",
+                  padding: "0",
+                }}
+              >
+                <Box component="img" src={art1} css={imageStyle} />
+                <Box component="img" src={art2} css={imageStyle} />
               </Box>
             </Box>
           </Grid>

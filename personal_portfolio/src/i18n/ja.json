@@ -84,5 +84,21 @@
       "javasilver": "Java Silver SE10",
       "lpic1": "Lpic Level 1"
     }
+  },
+  "hobby": {
+    "travel": "travel",
+    "coffee": "coffee",
+    "food": "mexican food",
+    "art": "art",
+    "description": {
+      "travelText1": "インドアな人間ですが、旅行は好きです。",
+      "travelText2": "美容師を辞めた後、色んなところに旅行に行きました。",
+      "coffeeText1": "コーヒーが好きです。",
+      "coffeeText2": "特別詳しいわけではないのですが、深煎りのコーヒーが好きです。",
+      "foodText1": "メキシコ料理が好きです。",
+      "foodText2": "食へのこだわりは無い方だと思いますが、メキシコ料理は大好きです。",
+      "artText1": "美術館に行くのが好きです。",
+      "artText2": "たまにフラッと美術館に行きます。旅行先でも行くことがあります。"
+    }
   }
 }
