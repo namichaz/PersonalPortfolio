@@ -50,8 +50,8 @@ export const HobbyPage = () => {
   `;
 
   const imageStyle = css`
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
   `;
 
   const mainStyle = css`
@@ -125,7 +125,7 @@ export const HobbyPage = () => {
                 sx={{
                   display: "grid",
                   alignItems: "center",
-                  fontSize: { xs: "12px", sm: "15px", md: "15px", lg: "20px" },
+                  fontSize: { xs: "14px", sm: "15px", md: "15px", lg: "20px" },
                   fontWeight: "100",
                   padding: "0",
                 }}

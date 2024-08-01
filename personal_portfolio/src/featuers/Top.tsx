@@ -10,6 +10,7 @@ import { Skills } from "./Skills";
 import { Hobby } from "./Hobby";
 import { useNavigate } from "react-router-dom";
 import ScrollToTopButton from "components/ScrollToTopButton";
+import { ScrollTopButton } from "components/ScrollTopButton";
 
 export const Top: React.FC = () => {
   const image_style = css`
@@ -38,30 +39,8 @@ export const Top: React.FC = () => {
     }
   `;
 
-  const mainStyle = css`
-    animation-name: faderightAnime; /*アニメーションの定義名*/
-    animation-duration: 1s; /*アニメーション変化時間 ※デフォルト*/
-    animation-fill-mode: forwards; /*アニメーションの開始と終了時の状態を指定*/
-    opacity: 0;
-    animation-duration: 0ms.5;
-    display: block;
-    min-height: 100vh;
-    padding-bottom: 60px; /*←footerの高さ*/
-    box-sizing: border-box;
-    @keyframes faderightAnime {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  `;
-
   return (
-    <div css={mainStyle}>
+    <div>
       <Header status={true} />
       <Container maxWidth="lg" fixed>
         <img css={image_style} src={top_image} alt="top_image" />
@@ -69,6 +48,7 @@ export const Top: React.FC = () => {
       <About />
       <Skills />
       <Hobby />
+      <ScrollTopButton />
       <Footer />
     </div>
   );

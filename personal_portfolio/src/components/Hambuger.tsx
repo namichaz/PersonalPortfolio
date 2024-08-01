@@ -46,8 +46,17 @@ const hamburgerStyle = (active: boolean) => css`
   }
 `;
 
+const burgerArea = css`
+  width: 40px;
+  height: 40px;
+  z-index: 9999;
+  position: relative;
+  padding-bottom: 10px;
+  padding-left: 10px;
+`;
+
 export const Hamburger: React.FC<HamburgerProps> = ({ active, onClick }) => (
-  <div onClick={onClick}>
+  <div css={burgerArea} onClick={onClick}>
     <div css={hamburgerStyle(active)} />
   </div>
 );

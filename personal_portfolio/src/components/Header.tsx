@@ -39,7 +39,7 @@ export const Header = (props: Props) => {
     display: none;
     width: 50px;
     height: 50px;
-    @media (max-width: 900px) {
+    @media (max-width: 600px) {
       font-size: 25px;
       display: block;
     }
@@ -59,6 +59,41 @@ export const Header = (props: Props) => {
     }
   `;
 
+  const ulStyle = css`
+    text-align: center;
+    width: 100%;
+    display: flex;
+    width: 100%;
+    column-gap: 100px;
+    font-size: 20px;
+    list-style: none;
+    text-decoration: none;
+    justify-content: right;
+    padding: 0;
+    @media (max-width: 600px) {
+      display: none;
+    }
+  `;
+  const navStyle = css`
+    ul {
+      li {
+        a {
+          color: #333;
+          padding: 10px;
+          display: block;
+          letter-spacing: 5px;
+          font-weight: lighter;
+          font-size: 18px;
+          text-decoration: none;
+          cursor: pointer;
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  `;
+
   const [isActive, setIsActive] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -74,12 +109,8 @@ export const Header = (props: Props) => {
           {t("header.title")}
         </a>
       </h1>
-      <div css={menubutton}>
-        <Hamburger active={isActive} onClick={toggleActive} />
-        <MenuContainer isOpen={isOpen} />
-      </div>
-      <nav>
-        <ul>
+      <nav css={navStyle}>
+        <ul css={ulStyle}>
           <li>
             <a onClick={toOtherPage}>{t("header.nav_about")}</a>
           </li>
@@ -91,6 +122,10 @@ export const Header = (props: Props) => {
           </li>
         </ul>
       </nav>
+      <div css={menubutton}>
+        <Hamburger active={isActive} onClick={toggleActive} />
+        <MenuContainer isOpen={isOpen} />
+      </div>
     </Container>
   );
 };
