@@ -1,8 +1,10 @@
 {
   "files": {
     "main.css": "/PersonalPortfolio/static/css/main.18ae63d6.css",
-    "main.js": "/PersonalPortfolio/static/js/main.a7f2b81f.js",
+    "main.js": "/PersonalPortfolio/static/js/main.bdb1ef1b.js",
+    "static/media/art3.jpeg": "/PersonalPortfolio/static/media/art3.7d114b97ef8a6340d8a2.jpeg",
     "static/media/coffee3.jpeg": "/PersonalPortfolio/static/media/coffee3.8a4fe96f2178c8d6fce7.jpeg",
+    "static/media/aquarium.jpeg": "/PersonalPortfolio/static/media/aquarium.6f01574344e881c0d83e.jpeg",
     "static/media/food2.jpeg": "/PersonalPortfolio/static/media/food2.bdc7affb8d4cc4f09b5b.jpeg",
     "static/media/moma.jpeg": "/PersonalPortfolio/static/media/moma.01750c29f8a8480d463a.jpeg",
     "static/media/art1.jpeg": "/PersonalPortfolio/static/media/art1.337e873e1c94d9863dc2.jpeg",
@@ -10,21 +12,19 @@
     "static/media/ny2.jpeg": "/PersonalPortfolio/static/media/ny2.65ae8a7a03e9e1b6d874.jpeg",
     "static/media/art2.jpeg": "/PersonalPortfolio/static/media/art2.fa1ce74c2a82636c9956.jpeg",
     "static/media/coffee2.jpeg": "/PersonalPortfolio/static/media/coffee2.b3bdb0efba073d8202de.jpeg",
-    "static/media/ny1.jpeg": "/PersonalPortfolio/static/media/ny1.6ef362164fc1335f07ee.jpeg",
     "static/media/food3.jpeg": "/PersonalPortfolio/static/media/food3.eff84825925a9b35d6a0.jpeg",
     "static/media/food1.jpeg": "/PersonalPortfolio/static/media/food1.8776b628c021ed7493d8.jpeg",
     "static/media/coffee1.jpeg": "/PersonalPortfolio/static/media/coffee1.b41e07fc181abc768a52.jpeg",
     "static/media/top.jpeg": "/PersonalPortfolio/static/media/top.f72369f470c52b513b80.jpeg",
-    "static/media/art3.jpeg": "/PersonalPortfolio/static/media/art3.42f0c9f1a8f62212e475.jpeg",
     "static/media/me.jpeg": "/PersonalPortfolio/static/media/me.f6713d78095bc270a6b6.jpeg",
     "static/media/about.jpeg": "/PersonalPortfolio/static/media/about.2ed0672b6ab7fe5ee987.jpeg",
     "static/media/fujisan.jpeg": "/PersonalPortfolio/static/media/fujisan.87a7e1b3ec68c27a3906.jpeg",
     "index.html": "/PersonalPortfolio/index.html",
     "main.18ae63d6.css.map": "/PersonalPortfolio/static/css/main.18ae63d6.css.map",
-    "main.a7f2b81f.js.map": "/PersonalPortfolio/static/js/main.a7f2b81f.js.map"
+    "main.bdb1ef1b.js.map": "/PersonalPortfolio/static/js/main.bdb1ef1b.js.map"
   },
   "entrypoints": [
     "static/css/main.18ae63d6.css",
-    "static/js/main.a7f2b81f.js"
+    "static/js/main.bdb1ef1b.js"
   ]
 }
